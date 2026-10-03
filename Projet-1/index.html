@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Code Lab - Projet 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <nav>
+        <h1>MON CODE LAB</h1>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="">Projet 2</a></li>
+            <li><a href="">Projet 3</a></li>
+        </ul>
+    </nav>
+    <h1 class="pageTitle">PROJET-1 : Formulaire Dynamique</h1>
+</header>
+
+<main class="labLayout">
+    <aside class="sidebarProject">
+        <h2>Présentation</h2>
+        <p>
+            Ce mini projet met en pratique la création d'un formulaire dynamique. L'objectif est de structurer la saisie
+            des données d'un chantier photovoltaïque de manière claire et ainsi obtenir une structure de données
+            normalisée pour l'application des algorithmes de calcul afin d'obtenir une liste complète et précise de la
+            composition du support d'installation.
+        </p>
+        <h3>Techniques utilisées</h3>
+        <ul>
+            <li>
+                <strong>Structure sémantique :</strong> Utilisation de balises adaptées pour garantir l'accessibilité et
+                la clarté du formulaire.
+            </li>
+            <li>
+                <strong>Validation native :</strong> Emploi des attributs <code>required</code> et de contraintes de
+                longueur (<code>maxlength</code>) pour sécuriser la saisie des données.
+            </li>
+            <li>
+                <strong>Dynamisme JavaScript :</strong> Génération des nouveaux champs, lignes et colonnes gârce a
+                l'utilisation des boucles <code>for</code>
+            </li>
+            <li>
+                <strong>Formatage des données :</strong> À la soumission du formulaire les données Saisies sont formatées
+                et ordonnées dans un objet JS, puis converties en un objet JSON qui sera aisément transmis au backend.
+            </li>
+        </ul>
+    </aside>
+
+    <section class="sectionFormContainer">
+        <form action="" method="POST">
+            <fieldset>
+                <legend><h3>Créer votre dossier</h3></legend>
+                <div class="formGroup">
+                    <label for="inputName" id="dirName">Nom du dossier :</label>
+                    <input type="text" name="dirName" id="inputName" required>
+                    <label for="inputDirNumber" id="dirNumber">Numéro de dossier :</label>
+                    <input type="text" name="dirNumber" id="inputDirNumber" required>
+                </div>
+                <div class="formGroup">
+                    <label for="inputStreetNum" id="streetNum">N° :</label>
+                    <input type="text" name="streetNum" id="inputStreetNum">
+                    <label for="inputAdressName" id="adressName">Rue :</label>
+                    <input type="text" name="adressName" id="inputAdressName" maxlength="20" required>
+                </div>
+                <div class="formGroup">
+                    <label for="zipCodeInput" id="zipCode">Code postal :</label>
+                    <input type="text" name="zipCodeInput" id="zipCodeInput" required>
+                    <label for="cityInput" id="city">Ville :</label>
+                    <input type="text" name="cityInput" id="cityInput" required>
+                </div>
+                <div class="formGroup">
+                    <label for="telInput" id="tel">N° de téléphone</label>
+                    <input type="tel" name="tel" id="telInput" required>
+                    <label for="emailInput" id="email">Email</label>
+                    <input type="email" name="email" id="emailInput" required>
+                </div>
+            </fieldset>
+            <fieldset id="monFieldset">
+                <legend><h3>Décrivez votre système photovoltaïque</h3></legend>
+                <div class="formGroup">
+                    <label for="captNumInput" id="captNum">Nombre total de capteurs :</label>
+                    <input type="number" name="captNum" id="captNumInput" value="0" required>
+                    <label for="champNumInput">Nombre de champs solaires :</label>
+                    <input type="number" name="champNum" id="champNumInput" value="0" required>
+                </div>
+                <input type="submit" value="Créer votre bon de commande">
+                <pre
+                        id="resultDisplay" style="background: #1e293b; color: #38bdf8; padding: 1rem; border-radius: 6px;
+                        margin-top: 1.5rem; font-family: monospace; white-space: pre-wrap;">
+                </pre>
+            </fieldset>
+        </form>
+    </section>
+</main>
+</body>
+</html>
