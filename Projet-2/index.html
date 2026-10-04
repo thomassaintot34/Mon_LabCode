@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Code Lab - Projet 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <nav>
+        <h1>MON CODE LAB</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Projet-1/index.html">Projet 1</a></li>
+            <li><a href="../Projet-3/index.html">Projet 3</a></li>
+        </ul>
+    </nav>
+    <h1 class="pageTitle">PROJET- 2: Manipulation d'objet JS</h1>
+</header>
+<main class="labLayout">
+    <aside class="sidebarProject">
+        <h2>Présentation</h2>
+        <p>
+            Ce second projet met en pratique la manipulation avancée de données sous forme de tableau interactif.
+            L'objectif est d'exploiter un jeu de données structuré représentant un effectif sportif (U18F) pour effectuer
+            des filtrages croisés en temps réel (par poste, disponibilité et année de naissance), tout en
+            offrant une navigation interactive et dynamique vers les fiches individuelles de chaque joueuse.
+        </p>
+        <h3>Techniques utilisées</h3>
+        <ul>
+            <li>
+                <strong>Tableaux HTML :</strong> Structuration sémantique avec les balises conventionnelles
+                <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code> et <code>&lt;tbody&gt;</code>.
+            </li>
+            <li>
+                <strong>Manipulation de données :</strong> Exploitation des méthodes natives JavaScript (telles
+                que <code>filter()</code> et <code>forEach()</code>) pour traiter les objets et appliquer des critères
+                stricts.
+            </li>
+            <li>
+                <strong>DOM Dynamique :</strong> Injection, mise à jour instantanée des lignes du tableau et gestion des
+                écouteurs d'événements (<code>change</code> et <code>click</code>) pour une UI réactive.
+            </li>
+            <li>
+                <strong>Navigation interactive :</strong> Redirection dynamique vers des fiches individuelles
+                via l'exploitation des identifiants uniques.
+            </li>
+        </ul>
+    </aside>
+
+    <section class="sectionTableContainer">
+        <h2>EFFECTIF U18F Saison 2026/2027</h2>
+        <div class="filtersBar">
+            <div class="filterGroup">
+                <label for="parPoste">Par poste :</label>
+                <select id="parPoste">
+                    <option value="">Tous les postes</option>
+                    <option value="Pilier gauche">Pilier gauche</option>
+                    <option value="Talonneuse">Talonneuse</option>
+                    <option value="Pilier droit">Pilier droit</option>
+                    <option value="Deuxième ligne gauche">Deuxième ligne gauche</option>
+                    <option value="Deuxième ligne droit">Deuxième ligne droit</option>
+                    <option value="3eme ligne aile">3ème ligne aile</option>
+                    <option value="3eme ligne centre">3ème ligne centre</option>
+                    <option value="Demi de mêlée">Demi de mêlée</option>
+                    <option value="Demi d'ouverture">Demi d'ouverture</option>
+                    <option value="1er Centre">1er Centre</option>
+                    <option value="2eme Centre">2eme Centre</option>
+                    <option value="Ailiere">Ailiere</option>
+                    <option value="Arrière">Arrière</option>
+                </select>
+            </div>
+            <div class="filterGroup">
+                <label for="dispoInput">Disponibilité :</label>
+                <select id="dispoInput">
+                    <option value="">Toutes</option>
+                    <option value="true">Disponible</option>
+                    <option value="false">Indisponible</option>
+                </select>
+            </div>
+            <div class="filterGroup">
+                <label for="birthYear">Année :</label>
+                <select id="birthYear">
+                    <option value="">Toutes</option>
+                    <option value="2009">2009 (1ère année)</option>
+                    <option value="2010">2010 (2ème année)</option>
+                    <option value="2011">2011 (3ème année)</option>
+                </select>
+            </div>
+        </div>
+        <table class="teamTable">
+            <thead>
+            <tr>
+                <th>Poste</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Année</th>
+                <th>Dispo</th>
+            </tr>
+            </thead>
+            <tbody id="playerTableBody">
+
+            </tbody>
+        </table>
+    </section>
+</main>
+</body>
+</html>
