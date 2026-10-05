@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Code Lab - Projet 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <nav>
+        <h1>MON CODE LAB</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Projet-1/index.html">Projet 1</a></li>
+            <li><a href="../Projet-2/index.html">Projet 2</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="pageLayout">
+    <aside class="sidebarProject">
+        <h2>Présentation</h2>
+        <p>
+            Ce troisième projet met en pratique la validation moderne d'un formulaire de création de compte orienté
+            expérience utilisateur (UX). L'objectif est d'exploiter des expressions régulières (Regex) et des écouteurs
+            d'événements avancés pour contrôler en temps réel la conformité, la sécurité et la cohérence des données
+            saisies (nom, pseudo, e-mail, téléphone, mot de passe sécurisé et validation par comparaison stricte).
+        </p>
+        <h2>Techniques utilisées</h2>
+        <ul>
+            <li>
+                <strong>Validation par Regex :</strong> Utilisation d'expressions régulières strictes pour imposer des
+                formats de saisie précis et sécurisés (complexité des mots de passe, structures de mails et numéros de
+                téléphone).
+            </li>
+            <li>
+                <strong>Événements dynamiques :</strong> Exploitation de l'événement <code>input</code> pour un retour
+                visuel instantané à chaque frappe, et de l'événement <code>blur</code> pour gérer la perte de focus.
+            </li>
+            <li>
+                <strong>UX Avancée :</strong> Implémentation d'une alerte visuelle forte (bordure et
+                <code>box-shadow</code> rouge vif) afin de guider immédiatement l'utilisateur en cas d'erreur.
+            </li>
+            <li>
+                <strong>JavaScript Moderne :</strong> Utilisation de fonctions fléchées et de conditions abrégées
+                (opérateurs ternaires) pour un code épuré.
+            </li>
+        </ul>
+    </aside>
+    <section class="sectionFormContainer">
+        <h2>Créer un compte</h2>
+        <form id="registerForm" novalidate>
+            <div class="inputGroup">
+                <label for="firstNameInput">Prénom</label>
+                <input type="text" id="firstNameInput" placeholder="Ex: Antoine">
+            </div>
+            <div class="inputGroup">
+                <label for="lastNameInput">Nom</label>
+                <input type="text" id="lastNameInput" placeholder="Ex: Dupont">
+            </div>
+            <div class="inputGroup">
+                <label for="pseudoInput">Pseudo</label>
+                <input type="text" id="pseudoInput" placeholder="Ex: Adupont31">
+            </div>
+            <div class="inputGroup">
+                <label for="phoneInput">Téléphone</label>
+                <input type="tel" id="phoneInput" placeholder="Ex: 0612345678">
+            </div>
+            <div class="inputGroup">
+                <label for="emailInput">Email</label>
+                <input type="email" id="emailInput" placeholder="Ex: Antoine.dupont@email.com">
+            </div>
+            <div class="inputGroup">
+                <label for="passwordInput">Mot de passe (8 caractères min, maj, chiffre, symbole)</label>
+                <input type="password" id="passwordInput">
+            </div>
+            <div class="inputGroup">
+                <label for="confirmPasswordInput">Confirmer le mot de passe</label>
+                <input type="password" id="confirmPasswordInput">
+            </div>
+            <button type="submit" id="submitBtn" class="submitButton">S'inscrire</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

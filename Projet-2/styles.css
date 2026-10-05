@@ -171,7 +171,7 @@ header .pageTitle {
 
 .teamTable th,
 .teamTable td {
-    padding: 0.85rem 1rem;
+    padding: 0.15rem 1rem;
     text-align: left;
     border-bottom: 1px solid #e2e8f0;
 }

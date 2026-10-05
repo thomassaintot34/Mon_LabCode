@@ -53,7 +53,7 @@ function afficherEffectif(donnees) {
         const tr = document.createElement('tr');
 
         tr.addEventListener('click', function() {
-            window.location.href = 'playerpage.html?id=' + joueuse.id;
+            window.location.href = 'playerPage.html?id=' + joueuse.id;
         });
 
         const statutDispo = joueuse.disponible

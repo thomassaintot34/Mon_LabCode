@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 2rem;
+}
+
+header {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #1e3c72;
+    text-decoration: none;
+}
+
+.pageLayout {
+    display: flex;
+    max-width: 1200px;
+    margin: 3rem auto;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.sidebarProject {
+    flex: 1;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sidebarProject h2 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+.sidebarProject p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+
+.sidebarProject ul {
+    padding-left: 1.5rem;
+    color: #4b5563;
+}
+
+.sidebarProject li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.sectionFormContainer {
+    flex: 1.5;
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sectionFormContainer h2 {
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.inputGroup label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #475569;
+    margin-bottom: 0.4rem;
+}
+
+.inputGroup input {
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.inputError {
+    border: 2px solid #dc2626 !important;
+    box-shadow: 0 0 8px rgba(220, 38, 38, 0.5) !important;
+    background-color: #fef2f2 !important;
+}
+
+.inputSuccess {
+    border: 2px solid #16a34a !important;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 0.85rem;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    margin-top: 1rem;
+}
+
+.submitButton:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .pageLayout {
+        flex-direction: column;
+    }
+}
