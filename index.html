@@ -1,60 +1,88 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mon Code Lab</title>
+    <title>Mon Code Lab - Projet 3</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>MON CODE LAB</h1>
-            <ul>
-                <li><a href="./Projet-1/index.html">Projet 1</a></li>
-                <li><a href="./Projet-2/index.html">Projet 2</a></li>
-                <li><a href="./Projet-3/index.html">Projet 3</a></li>
-            </ul>
-        </nav>
-        <h1>Projet-3 (En cours de développement)</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Bienvenue dans Mon Code Lab!</h2>
-            <p>
-                Ce site rassemble des démonstrations concrètes de mes compétences en HTML, CSS et JavaScript. N'étant
-                qu'en début de formation, ce lab reflète avant tout un travail personnel d'auto-apprentissage.
-            </p>
-            <p>
-                Plutôt que de tricher ou de survendre mon profil, j'ai choisi de montrer mon niveau réel. Tout n'est pas
-                forcément parfait, mais tout est assumé : chaque ligne de code est écrite à la main pour m'approprier la
-                logique. Pour certaines briques annexes — comme les motifs de Regex ou quelques jeux de données — je
-                m'appuie sur l'IA pour gagner du temps, mais je vérifie, je teste (notamment sur Regex101) et j'intègre tout
-                moi-même. Je m'assure aussi de la propreté de mon code en validant mes pages sur le W3S Validator.
-            </p>
-            <p>
-                Vous trouverez ci-contre les différents modules et exercices qui composent ce lab. Bonne visite !
-            </p>
-        </section>
-        <section id="projets">
-            <h3>Les Modules du Lab</h3>
-            <ul>
-                <li>
-                    <strong>Projet 1 : Formulaire dynamique</strong><br>
-                    Gestion d'interactions et de champs générés ou modifiés dynamiquement en JavaScript.
-                </li>
-                <li>
-                    <strong>Projet 2 : Tableau dynamique et filtres</strong><br>
-                    Manipulation de données sous forme de tableau avec tris et filtres en temps réel.
-                </li>
-                <li>
-                    <strong>Projet 3 : Création de compte et Regex</strong><br>
-                    Sécurisation et validation des saisies utilisateur grâce aux expressions régulières (Regex).
-                </li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>Projet présenté dans le cadre de mon portfolio — Conçu en HTML/CSS/JavaScript natif et 100% responsive.</p>
-    </footer>
+<header>
+    <nav>
+        <h1>MON CODE LAB</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Projet-1/index.html">Projet 1</a></li>
+            <li><a href="../Projet-2/index.html">Projet 2</a></li>
+        </ul>
+    </nav>
+    <h1 class="pageTitle">PROJET-3 : Validation de Formulaire <span style="font-size: 10px;">(en cours de developpement...)</span></h1>
+</header>
+<main class="pageLayout">
+    <aside class="sidebarProject">
+        <h2>Présentation</h2>
+        <p>
+            Ce troisième projet met en pratique la validation moderne d'un formulaire de création de compte orienté
+            expérience utilisateur (UX). L'objectif est d'exploiter des expressions régulières (Regex) et des écouteurs
+            d'événements avancés pour contrôler en temps réel la conformité, la sécurité et la cohérence des données
+            saisies (nom, pseudo, e-mail, téléphone, mot de passe sécurisé et validation par comparaison stricte).
+        </p>
+        <h2>Techniques utilisées</h2>
+        <ul>
+            <li>
+                <strong>Validation par Regex :</strong> Utilisation d'expressions régulières strictes pour imposer des
+                formats de saisie précis et sécurisés (complexité des mots de passe, structures de mails et numéros de
+                téléphone).
+            </li>
+            <li>
+                <strong>Événements dynamiques :</strong> Exploitation de l'événement <code>input</code> pour un retour
+                visuel instantané à chaque frappe, et de l'événement <code>blur</code> pour gérer la perte de focus.
+            </li>
+            <li>
+                <strong>UX Avancée :</strong> Implémentation d'une alerte visuelle forte (bordure et
+                <code>box-shadow</code> rouge vif) afin de guider immédiatement l'utilisateur en cas d'erreur.
+            </li>
+            <li>
+                <strong>JavaScript Moderne :</strong> Utilisation de fonctions fléchées et de conditions abrégées
+                (opérateurs ternaires) pour un code épuré.
+            </li>
+        </ul>
+    </aside>
+    <section class="sectionFormContainer">
+        <h2>Créer un compte</h2>
+        <form id="registerForm" novalidate>
+            <div class="inputGroup">
+                <label for="firstNameInput">Prénom</label>
+                <input type="text" id="firstNameInput" placeholder="Ex: Antoine">
+            </div>
+            <div class="inputGroup">
+                <label for="lastNameInput">Nom</label>
+                <input type="text" id="lastNameInput" placeholder="Ex: Dupont">
+            </div>
+            <div class="inputGroup">
+                <label for="pseudoInput">Pseudo</label>
+                <input type="text" id="pseudoInput" placeholder="Ex: Adupont31">
+            </div>
+            <div class="inputGroup">
+                <label for="phoneInput">Téléphone</label>
+                <input type="tel" id="phoneInput" placeholder="Ex: 0612345678">
+            </div>
+            <div class="inputGroup">
+                <label for="emailInput">Email</label>
+                <input type="email" id="emailInput" placeholder="Ex: Antoine.dupont@email.com">
+            </div>
+            <div class="inputGroup">
+                <label for="passwordInput">Mot de passe (8 caractères min, maj, chiffre, symbole)</label>
+                <input type="password" id="passwordInput">
+            </div>
+            <div class="inputGroup">
+                <label for="confirmPasswordInput">Confirmer le mot de passe</label>
+                <input type="password" id="confirmPasswordInput">
+            </div>
+            <button type="submit" id="submitBtn" class="submitButton">S'inscrire</button>
+        </form>
+    </section>
+</main>
 </body>
 </html>
