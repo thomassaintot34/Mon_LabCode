@@ -79,34 +79,63 @@ header .pageTitle {
 }
 
 .sidebarProject {
-    flex: 1;
-    background: #ffffff;
-    padding: 2.5rem; /* Ajusté pour correspondre au Projet 1 */
-    border-radius: 10px; /* Coins arrondis identiques au Projet 1 */
-    border: 1px solid #dcdde1; /* Bordure grise subtile du Projet 1 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* Ombre douce du Projet 1 */
+    flex: 0 0 35%;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid #dcdde1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
 }
 
-.sidebarProject h2,
+.sidebarProject h2 {
+    color: #1e3c72;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+}
+
 .sidebarProject h3 {
     color: #1e3c72;
+    font-size: 1.4rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
 .sidebarProject p {
+    font-size: 1.1rem;
+    font-weight: normal;
     margin-bottom: 1.5rem;
     color: #4b5563;
 }
 
 .sidebarProject ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
 .sidebarProject li {
-    margin-bottom: 0.8rem;
-    color: #4b5563;
-    font-size: 0.95rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.sidebarProject li strong {
+    color: #1e3c72;
+}
+
+.sidebarProject code {
+    background-color: #e2e8f0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #1e3c72;
 }
 
 .sectionTableContainer {
