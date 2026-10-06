@@ -61,13 +61,16 @@ nav a:hover {
     text-decoration: none;
 }
 
-nav h2 {
-    font-size: 1rem;
+nav h1.pageTitle {
+    flex-basis: 100%;
+    text-align: center; /* Centre le texte sur la nouvelle ligne (vous pouvez mettre 'left' ou 'right' selon vos préférences) */
+    font-size: 1.2rem;
     font-weight: normal;
     font-style: italic;
-    margin: 0;
     opacity: 0.9;
+    margin-top: 0.5rem; /* Ajoute un petit espace au-dessus du sous-titre */
 }
+
 
 main {
     display: flex;

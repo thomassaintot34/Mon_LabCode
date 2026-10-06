@@ -81,9 +81,10 @@ header .pageTitle {
 .sidebarProject {
     flex: 1;
     background: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem; /* Ajusté pour correspondre au Projet 1 */
+    border-radius: 10px; /* Coins arrondis identiques au Projet 1 */
+    border: 1px solid #dcdde1; /* Bordure grise subtile du Projet 1 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* Ombre douce du Projet 1 */
 }
 
 .sidebarProject h2,
@@ -109,11 +110,11 @@ header .pageTitle {
 }
 
 .sectionTableContainer {
-    flex: 2;
+    flex: 1.5;
     background: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 3rem;
+    border-radius: 10px;
+    border: 1px solid #dcdde1;
 }
 
 .sectionTableContainer h2 {
