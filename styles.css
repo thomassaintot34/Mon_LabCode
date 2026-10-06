@@ -26,6 +26,7 @@ nav {
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 nav h1 {
@@ -60,7 +61,13 @@ nav a:hover {
     text-decoration: none;
 }
 
-
+nav h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0;
+    opacity: 0.9;
+}
 
 main {
     display: flex;
