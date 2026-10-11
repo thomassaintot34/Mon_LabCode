@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             input.style.boxShadow = "";
         } else {
             input.style.borderColor = "#ff4d4d";
-            input.style.boxShadow = "0 0 5px rgba(255, 77, 77, 0.5)";
+            input.style.boxShadow = "0 0 15px rgba(255, 77, 77, 0.9)";
         }
     }
 
